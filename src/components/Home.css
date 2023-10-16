@@ -1,0 +1,16 @@
+.main{
+    margin-top: 92px;
+    background-color: #131313;
+    color: aliceblue;
+}
+.pagination{
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+
+.Heading{
+  padding-top: 4px;
+  color: bisque;
+}

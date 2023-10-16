@@ -1,0 +1,39 @@
+.nav1 {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .nav1 .searchbox {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .nav1 .searchbox input[type="text"] {
+    padding: 5px 10px;
+    border: none;
+    background-color: white;
+    color: black;
+  }
+  
+  .nav1 .searchbox button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .navbar-links {
+    display: flex;
+  }
+  
+  .navbar-link {
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+  }
+  

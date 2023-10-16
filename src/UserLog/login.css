@@ -1,0 +1,111 @@
+/* style.css */
+
+.container {
+  color: #ccc;
+  align-items: center;
+  background-color: #000;
+  text-align: center;
+  
+}
+
+.signtop{
+  margin-top: 0%;
+  background-color: #000;
+}
+
+
+
+
+
+
+
+.signup {
+  margin-top: 70px;
+}
+
+.signuptitle {
+  color: #fff;
+  font-size: 36px;
+}
+
+.signupButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 112px;
+}
+
+.signupButton:hover {
+  background-color: #0056b3;
+}
+
+.title {
+  color: #f5a623;
+  font-size: 24px;
+ text-align: center;
+ padding: 20px;
+}
+
+.title2 {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
+
+.loginBox {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: center;
+}
+
+.LoginHeading {
+  color: #000;
+  font-size: 24px;
+}
+
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.EmailBox,
+.PasswordBox {
+  width: 25%;
+  padding: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  
+}
+
+.submitButton {
+  width: 25%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+.Information {
+  color: #f5a623;
+  font-style: italic;
+  font-weight: thin;
+  margin-top: 10px;
+}
