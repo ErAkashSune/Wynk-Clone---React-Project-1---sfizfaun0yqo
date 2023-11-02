@@ -1,70 +1,115 @@
-# Getting Started with Create React App
+Wynk Clone
+-
+hosting Link-https://652d3f64c02bca13c6d765a0--precious-begonia-a2951c.netlify.app/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Project Overview
+-
+This project is an Music Player focused on enhancing React.js skills and adhering to best practices in UI development. It replicates the core features of Music , a popular Wynk platform.
 
-In the project directory, you can run:
+Features
+-
+-Home Page and Featured Content: Browse and discover featured content on the home page.
 
-### `npm start`
+-Music Interaction: View and interact with like and playing.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+-Album Interaction: View and interact with Music ,Artist and playing.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-Authentication: Connect to a server for user registration and login.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Tech Stack
+-
 
-### `npm run build`
+-HTML
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-CSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-JavaScript
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-React
 
-### `npm run eject`
+Credits
+-
+-Icons from React and Material UI.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-The project is designed to be fully responsive.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Project Context
+-
+The Wynk Clone project aims to create an application that mirrors the core functionalities of wynk, a widely-used playin music platform. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+APIs Used
+-
+To fetch data, the following APIs have been used: projectID:ym36gw00it6q
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Login:
+-
+fetch('https://academics.newtonschool.co/api/v1/user/login', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        email: 'user_email',
+        password: 'user_password',
+        appType: 'music',
+    })
+})
 
-## Learn More
+Signup:
+-
+fetch('https://academics.newtonschool.co/api/v1/user/signup', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        name: 'user_name',
+        email: 'user_email',
+        password: 'user_password',
+        appType: 'music',
+    })
+})
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Get list of music:
+-
+fetch('https://academics.newtonschool.co/api/v1/music/song', {
+    headers:
+        'projectId': 'YOUR_PROJECT_ID'
+    }
+})
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Get list of albums:
+-
+fetch('https://academics.newtonschool.co/api/v1/music/album', {
+    headers: {
+        'projectId': 'YOUR_PROJECT_ID'
+    }
+})
 
-### Analyzing the Bundle Size
+You can use the below search API or the filter API for searching:
+-
+fetch('https://academics.newtonschool.co/api/v1/music/song?search={"title":"search_term_here"}', {
+    headers: {
+        'projectID': 'YOUR_PROJECT_ID'
+    }
+})
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Get album using id:
+-
+fetch('https://academics.newtonschool.co/api/v1/music/album/:id', {
+    headers: {
+        'projectId': 'YOUR_PROJECT_ID'
+    }
+})
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Get artist using id:
+-
+fetch('https://academics.newtonschool.co/api/v1/music/artist/:id', {
+    headers: {
+        'projectId': 'YOUR_PROJECT_ID'
+    }
+})
